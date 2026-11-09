@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="generic">
+  <id>io.github.vitexsoftware.pohoda_api_doc_cs</id>
+  <icon type="stock">pohoda-api-doc-cs</icon>
+  <metadata_license>MIT</metadata_license>
+  <project_license>MIT</project_license>
+  <name>Dokumentace integrace Stormware Pohoda</name>
+  <summary>Česká HTML dokumentace XML, mServer a SQL rozhraní Pohody</summary>
+  <description>
+    <p>
+      Sphinx-generovaná HTML dokumentace integračních rozhraní účetního systému Stormware Pohoda: XML import/export (dataPack, XSD), mServer (HTTP) a struktura SQL databáze. Sestaveno z oficiální dokumentace stormware.cz a XSD schémat.
+    </p>
+  </description>
+  <url type="homepage">https://github.com/VitexSoftware/pohoda-api-doc</url>
+  <url type="bugtracker">https://github.com/VitexSoftware/pohoda-api-doc/issues</url>
+  <developer id="cz.vitexsoftware">
+    <name>Vítězslav Dvořák</name>
+  </developer>
+  <content_rating type="oars-1.1"/>
+</component>

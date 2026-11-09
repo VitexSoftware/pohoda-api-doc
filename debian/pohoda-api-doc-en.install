@@ -1,0 +1,4 @@
+debian/doc-en-html/* usr/share/doc/pohoda-api-doc-en/html
+debian/pohoda-api-doc-en.nginx usr/share/doc/pohoda-api-doc-en/
+debian/io.github.vitexsoftware.pohoda_api_doc_en.metainfo.xml usr/share/metainfo/
+debian/pohoda-api-doc-en.svg usr/share/icons/hicolor/scalable/apps/

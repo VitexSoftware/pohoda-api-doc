@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="generic">
+  <id>io.github.vitexsoftware.pohoda_api_doc_en</id>
+  <icon type="stock">pohoda-api-doc-en</icon>
+  <metadata_license>MIT</metadata_license>
+  <project_license>MIT</project_license>
+  <name>Stormware Pohoda Integration Documentation</name>
+  <summary>English HTML documentation of the Pohoda XML, mServer and SQL interfaces</summary>
+  <description>
+    <p>
+      Sphinx-generated HTML documentation of the integration interfaces of the Stormware Pohoda accounting system: XML import/export (dataPack, XSD), mServer (HTTP) and the SQL database structure. Compiled from the official stormware.cz documentation and the XSD schemas.
+    </p>
+  </description>
+  <url type="homepage">https://github.com/VitexSoftware/pohoda-api-doc</url>
+  <url type="bugtracker">https://github.com/VitexSoftware/pohoda-api-doc/issues</url>
+  <developer id="cz.vitexsoftware">
+    <name>Vítězslav Dvořák</name>
+  </developer>
+  <content_rating type="oars-1.1"/>
+</component>

@@ -1,0 +1,45 @@
+Source: pohoda-api-doc
+Section: doc
+Priority: optional
+Maintainer: Vítězslav Dvořák <info@vitexsoftware.cz>
+Build-Depends: debhelper-compat (= 13),
+               dh-apache2 | apache2-dev,
+               python3-sphinx,
+               python3-shibuya-sphinx-theme
+Standards-Version: 4.7.0
+Homepage: https://github.com/VitexSoftware/pohoda-api-doc
+Vcs-Git: https://github.com/VitexSoftware/pohoda-api-doc.git
+Vcs-Browser: https://github.com/VitexSoftware/pohoda-api-doc
+
+Package: pohoda-api-doc-cs
+Section: doc
+Multi-Arch: foreign
+Architecture: all
+Depends: ${misc:Depends}
+Recommends: apache2 | nginx, ${misc:Recommends}
+Description: Dokumentace XML, mServer a SQL rozhraní Stormware Pohoda (česky)
+ Sphinx-generovaná HTML dokumentace integračních rozhraní účetního systému
+ Stormware Pohoda: XML import/export (dataPack, XSD schémata), mServer
+ (HTTP rozhraní) a struktura SQL databáze. Sestaveno z oficiální
+ dokumentace stormware.cz a z XSD schémat a ověřeno proti klientským
+ knihovnám VitexSoftware / Spoje.Net.
+ .
+ Apache2 konfigurační snippet se aktivuje automaticky při instalaci. Nginx
+ konfigurační snippet je nainstalován do /usr/share/doc/pohoda-api-doc-cs/.
+
+Package: pohoda-api-doc-en
+Section: doc
+Multi-Arch: foreign
+Architecture: all
+Depends: ${misc:Depends}
+Recommends: apache2 | nginx, ${misc:Recommends}
+Description: Stormware Pohoda XML, mServer and SQL interface documentation (English)
+ Sphinx-generated HTML documentation of the integration interfaces of the
+ Stormware Pohoda accounting system: XML import/export (dataPack, XSD
+ schemas), mServer (HTTP interface) and the SQL database structure.
+ Compiled from the official stormware.cz documentation and the XSD schemas
+ and cross-checked against the VitexSoftware / Spoje.Net client libraries.
+ .
+ An Apache2 configuration snippet is enabled automatically on installation.
+ An Nginx configuration snippet is installed to
+ /usr/share/doc/pohoda-api-doc-en/.

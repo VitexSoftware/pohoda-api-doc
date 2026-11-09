@@ -1,0 +1,23 @@
+# Sphinx build output
+cs/_build/
+en/_build/
+_build/
+**/__pycache__/
+*.py[cod]
+
+# Debian packaging build artifacts
+debian/pohoda-api-doc-cs/
+debian/pohoda-api-doc-en/
+debian/.debhelper/
+debian/doc-cs-html/
+debian/doc-en-html/
+debian/*.substvars
+debian/*.debhelper
+debian/*.debhelper.log
+debian/debhelper-build-stamp
+debian/files
+
+# OS
+.DS_Store
+Thumbs.db
+*~

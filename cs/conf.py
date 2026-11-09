@@ -1,0 +1,55 @@
+"""Sphinx configuration for the standalone Stormware Pohoda XML/mServer/SQL reference (Czech)."""
+
+from pathlib import Path
+
+project = "Dokumentace XML a mServer rozhraní Stormware Pohoda"
+copyright = "2026, obsah sestaven z oficiální dokumentace stormware.cz a zdrojů XSD, sestaveno VitexSoftware"
+author = "VitexSoftware"
+
+def _debian_upstream_version() -> str:
+    """Keep the footer version in sync with debian/changelog."""
+    changelog = Path(__file__).resolve().parent.parent / "debian" / "changelog"
+    first = changelog.read_text(encoding="utf-8").splitlines()[0]
+    # pohoda-api-doc (1.2.0-1) unstable; urgency=medium
+    inside = first.split("(", 1)[1].split(")", 1)[0]
+    return inside.rsplit("-", 1)[0]
+
+
+version = release = _debian_upstream_version()
+
+extensions = []
+
+templates_path = ["_templates"]
+exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
+
+html_theme = "alabaster"
+html_static_path = ["_static"]
+html_logo = "_static/pohoda.svg"
+html_favicon = "_static/pohoda.svg"
+
+# "Edit this page" link (rendered by the shibuya theme used for the
+# packaged docs; harmless no-op under alabaster).
+html_context = {
+    "source_type": "github",
+    "source_user": "VitexSoftware",
+    "source_repo": "pohoda-api-doc",
+    "source_version": "main",
+    "source_docs_path": "/cs/",
+}
+
+# Compatibility shim: the installed shibuya theme hardcodes pygments style
+# names ("github-light-default"/"github-dark-default") that only exist in
+# newer pygments releases than the one available here. Fall back to
+# built-in styles so `-D html_theme=shibuya` builds don't crash.
+try:
+    from pygments.styles import get_style_by_name
+
+    get_style_by_name("github-light-default")
+except Exception:
+    try:
+        import shibuya._pygments as _shibuya_pygments
+
+        _shibuya_pygments.ShibuyaPygmentsBridge.light_style_name = "default"
+        _shibuya_pygments.ShibuyaPygmentsBridge.dark_style_name = "github-dark"
+    except ImportError:
+        pass
